@@ -3,6 +3,8 @@ require 'test/unit'
 class ClassVariables < Test::Unit::TestCase
 
   # Here we see the difference between class, class instance, and instance variables
+  # Class variables will trickle down through all subclasses
+
   class ParentClass
     @variable = "A"
     @@variable = "B"
@@ -52,4 +54,5 @@ class ClassVariables < Test::Unit::TestCase
   end
 end
 
-
+# more:
+# http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
