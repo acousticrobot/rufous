@@ -20,10 +20,10 @@ end
 rescue LoadError
 end
 
-
 # test files, in order to be run
 require "meta_test"
 require "class_variables"
 require "class_instance_variables"
 require "meta_minitest"
 require "global_variables"
+require "files"

@@ -2,6 +2,15 @@ require 'test/unit'
 
 class MetaTest < Test::Unit::TestCase
 
+  def setup
+    # set conditions before each test
+  end
+
+  def teardown
+    # cleanup after each test
+  end
+
+
   # All definitions that start with 'test' will be run
   # Tests run in random order within the class
 
