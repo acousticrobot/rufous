@@ -55,18 +55,23 @@ class Files < Test::Unit::TestCase
       @furry = furry
     end
 
-    def self.init_from_yaml(file)
-      args = YAML.load_file(file)
-      YamlMammal.new(args[:name], args[:furry])
+    def self.init_from_yaml( file )
+      y = YAML.load_file(file)
+      YamlMammal.new(y[:name], y[:furry])
     end
 
-    def self.init_zoo( file )
-      log = File.open( file )
-      zoo = YAML::load_documents( log ) { |doc| "#{doc[name]}" }
+    def self.init_yamls( file )
+      zoo = []
+      File.open( file ) do |yf|
+        YAML.load_documents( yf ) do |y|
+          zoo << YamlMammal.new(y[:name], y[:furry])
+        end
+      end
+      zoo
     end
 
-    def store_as_yaml(file)
-      record = { name: @name, furry: @furry}
+    def store_as_yaml( file )
+      record = { name: @name, furry: @furry }
       File.open( file,'a' ) do |f|
         f.puts YAML::dump( record )
       end
@@ -86,8 +91,9 @@ class Files < Test::Unit::TestCase
 
     assert_equal(pig.name,beast.name)
 
-    zoo = YamlMammal.init_zoo(file)
-    assert_equal([],zoo)
+    animals = YamlMammal.init_yamls(file)
+
+    assert_equal "Bear", animals[1].name
   end
 end
 
