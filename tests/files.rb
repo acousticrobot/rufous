@@ -50,21 +50,21 @@ class Files < Test::Unit::TestCase
   class YamlMammal
     attr_accessor :furry, :name
 
-    def initialize(name, furry)
-      @name = name
-      @furry = furry
+    def initialize(params)
+      @name = params[:name]
+      @furry = params[:furry]
     end
 
     def self.init_from_yaml( file )
-      y = YAML.load_file(file)
-      YamlMammal.new(y[:name], y[:furry])
+      params = YAML.load_file(file)
+      YamlMammal.new params
     end
 
     def self.init_yamls( file )
       zoo = []
       File.open( file ) do |yf|
-        YAML.load_documents( yf ) do |y|
-          zoo << YamlMammal.new(y[:name], y[:furry])
+        YAML.load_documents( yf ) do |params|
+          zoo << YamlMammal.new( params )
         end
       end
       zoo
@@ -82,16 +82,16 @@ class Files < Test::Unit::TestCase
 
     file = File.join( @dir, "yaml_mammal.txt")
 
-    pig = YamlMammal.new 'Pig', false
-    bear = YamlMammal.new 'Bear', true
-    pig.store_as_yaml(file)
-    bear.store_as_yaml(file)
+    pig = YamlMammal.new( name:'Pig', furry: false )
+    bear = YamlMammal.new( name:'Bear', furry: true )
+    pig.store_as_yaml file
+    bear.store_as_yaml file
 
-    beast = YamlMammal.init_from_yaml(file)
+    beast = YamlMammal.init_from_yaml file
 
-    assert_equal(pig.name,beast.name)
+    assert_equal pig.name, beast.name
 
-    animals = YamlMammal.init_yamls(file)
+    animals = YamlMammal.init_yamls file
 
     assert_equal "Bear", animals[1].name
   end
