@@ -1,6 +1,8 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
+# http://mattsears.com/articles/2011/12/10/minitest-quick-reference
+
 describe MiniTest do
 
   before do
@@ -14,6 +16,12 @@ describe MiniTest do
 
     it "can be created with a specific size" do
       Array.new(10).size.must_equal 10
+    end
+  end
+
+  describe "examining errors" do
+    it "can raise an error" do
+      proc { foo }.must_raise NameError
     end
   end
 end
