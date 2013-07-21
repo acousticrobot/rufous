@@ -21,9 +21,12 @@ rescue LoadError
 end
 
 # test files, in order to be run
-require "meta_test"
-require "class_variables"
+
+require "arrays"
+require "class_instance_inheritables"
 require "class_instance_variables"
-require "meta_minitest"
-require "global_variables"
+require "class_variables"
 require "files"
+require "global_variables"
+require "meta_minitest"
+require "meta_test"

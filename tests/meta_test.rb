@@ -16,12 +16,12 @@ class MetaTest < Test::Unit::TestCase
 
   $global_counter = 0
 
-  def test_a_def_starting_with_test_gets_run
+  def test_a_def_starting_with__t_e_s_t__gets_run
     $global_counter += 1
     assert_equal(true, $global_counter <= 2)
   end
 
-  def test_here_is_a_test_that_will_run
+  def test_here_is_a__t_e_s_t__that_will_run
     $global_counter += 1
     assert_equal(true, $global_counter <= 2)
   end

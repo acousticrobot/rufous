@@ -13,10 +13,6 @@ class UniqeIdTest < Test::Unit::TestCase
       attr_reader :surname
     end
 
-    def self.members=(name)
-      @members << name
-    end
-
     def initialize( name )
       @name = name
       self.class.members << name
