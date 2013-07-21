@@ -8,7 +8,6 @@ class ClassInstanceInheritables < Test::Unit::TestCase
   # http://www.railstips.org/blog/archives/2006/11/18/class-and-instance-variables-in-ruby/
 
   class Family
-    attr_accessor :name
 
     def initialize (name)
       self.class.add_member name
