@@ -23,6 +23,7 @@ end
 # test files, in order to be run
 
 require "arrays"
+require "class_getter_setter"
 require "class_instance_inheritables"
 require "class_instance_variables"
 require "class_variables"
