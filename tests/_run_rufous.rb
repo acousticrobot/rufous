@@ -32,3 +32,5 @@ require "global_variables"
 require "inheritable_unique_ids"
 require "meta_minitest"
 require "meta_test"
+
+require "composite.rb"
