@@ -22,15 +22,22 @@ end
 
 # test files, in order to be run
 
+require "_test_helpers"
+
+require "passing_params"
 require "arrays"
+require "array_batch"
 require "class_getter_setter"
 require "class_instance_inheritables"
 require "class_instance_variables"
 require "class_variables"
-require "files"
+require "files_yaml"
+require "files_json_or_yaml"
 require "global_variables"
 require "inheritable_unique_ids"
 require "meta_minitest"
 require "meta_test"
+require "respond_to"
+require "splats"
 
 require "composite.rb"

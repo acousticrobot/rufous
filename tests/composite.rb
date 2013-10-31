@@ -61,11 +61,11 @@ class CompositeTests < Test::Unit::TestCase
     Composite.root_nodes = []
   end
 
+  #############################################################
+  #
   # tests
   #
-  def same_elements?(array_one, array_two)
-    ((array_one - array_two) + (array_two - array_one)).empty?
-  end
+  #############################################################
 
   def test_initialize_a_member
     c1 = Composite.new("root")
@@ -142,7 +142,4 @@ class CompositeTests < Test::Unit::TestCase
     report = Composite.report_trees
     assert_equal report, "+root1-branch1-branch2--branch3+root2-branch4"
   end
-
-
-
 end

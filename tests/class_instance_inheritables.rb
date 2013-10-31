@@ -46,10 +46,6 @@ class ClassInstanceInheritables < Test::Unit::TestCase
   rosaline = Capulet.new "Rosaline"
   tybalt = Capulet.new "Tybalt"
 
-  def same_elements?(array_one, array_two)
-    ((array_one - array_two) + (array_two - array_one)).empty?
-  end
-
   def test_making_class_instance_variables_inheritable
     assert( same_elements?( Montague.members, ["Romeo","Benvolio", "Mercutio"] ))
     assert( same_elements?( Capulet.members, ["Juliet", "Rosaline", "Tybalt"] ))
