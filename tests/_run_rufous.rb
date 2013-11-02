@@ -24,7 +24,6 @@ end
 
 require "_test_helpers"
 
-require "passing_params"
 require "arrays"
 require "array_batch"
 require "class_getter_setter"
@@ -37,6 +36,8 @@ require "global_variables"
 require "inheritable_unique_ids"
 require "meta_minitest"
 require "meta_test"
+require "passing_params"
+require "puts"
 require "respond_to"
 require "splats"
 
