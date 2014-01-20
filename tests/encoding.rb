@@ -7,9 +7,14 @@ class Encodings < Test::Unit::TestCase
 #
 # http://yehudakatz.com/2010/05/05/ruby-1-9-encodings-a-primer-and-the-solution-for-rails/
 
-  def test_utf_magic_comment_works
+  def test_utf_magic_comment_works_for_chinese
     f = "你好"
     assert_equal f, "你好"
+  end
+
+  def test_utf_magic_comment_works_for_emoji
+    f = "💘👌❤️🎵"
+    assert_equal f, "💘👌❤️🎵"
   end
 
   def test_encoding_keyword
