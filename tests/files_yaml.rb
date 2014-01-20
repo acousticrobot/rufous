@@ -40,7 +40,7 @@ class Files < Test::Unit::TestCase
       f.puts YAML::dump( record_in )
     end
 
-    record_out = thing = YAML.load_file(file)
+    record_out = YAML.load_file(file)
 
     assert_equal(record_in, record_out)
     assert_equal('Jerry',record_out[:name])

@@ -57,8 +57,8 @@ class Files < Test::Unit::TestCase
     j_util = JsonReaderWriter.new
     y_util = YamlReaderWriter.new
 
-    # j_util.save @j_file, record
-    # y_util.save @y_file, record
+    j_util.save @j_file, record
+    y_util.save @y_file, record
 
     j_record = j_util.read @j_file
     y_record = y_util.read @y_file
