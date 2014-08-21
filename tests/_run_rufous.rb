@@ -26,6 +26,7 @@ require "_test_helpers"
 
 require "arrays"
 require "array_batch"
+require "array_index"
 require "class_getter_setter"
 require "class_instance_inheritables"
 require "class_instance_variables"
