@@ -1,10 +1,10 @@
-require 'test/unit'
+require "minitest/autorun"
 
 # Saving a key work association hash, and
 # retrieving all associations with keywords found
 # in strings
 
-class KeyWordHash < Test::Unit::TestCase
+class KeyWordHash < MiniTest::Test
 
   @associations = {
     :"jim beam" => 1,

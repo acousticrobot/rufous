@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class UniqeIdTest < Test::Unit::TestCase
+class UniqeIdTest < MiniTest::Test
 
   class Family
     attr_accessor :name, :id

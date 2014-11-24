@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class ClassVariables < Test::Unit::TestCase
+class ClassVariables < MiniTest::Test
 
   # Here we see the difference between class, class instance, and instance variables
   # Class variables will trickle down through all subclasses

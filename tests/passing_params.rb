@@ -1,4 +1,4 @@
-require 'test/unit'
+require "minitest/autorun"
 
 class  OptionsClass
   attr_reader :options, :own_options
@@ -13,7 +13,7 @@ def params_switch options={}
   options[:change_test] = ! options[:change_test]
 end
 
-class PassingParams < Test::Unit::TestCase
+class PassingParams < MiniTest::Test
 
   def test_params_are_persistant
     params = {change_test: false}

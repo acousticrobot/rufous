@@ -25,7 +25,7 @@ module Kernel
   end
 end
 
-class PutsOutputTest < Test::Unit::TestCase
+class PutsOutputTest < MiniTest::Test
 
   def test_capture_puts
     out = capture_stdout do

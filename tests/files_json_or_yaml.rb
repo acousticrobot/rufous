@@ -1,6 +1,6 @@
 require 'json'
 
-class Files < Test::Unit::TestCase
+class Files < MiniTest::Test
 
   def setup
     @dir = File.join(Dir.home,".rufous")
@@ -66,6 +66,6 @@ class Files < Test::Unit::TestCase
     assert_equal record, y_record
 
     # JSON changes symbols to strings
-    assert_not_equal record, j_record
+    refute_equal record, j_record
   end
 end

@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class CompositeTests < Test::Unit::TestCase
+class CompositeTests < MiniTest::Test
 
   class Composite
     attr_accessor :name, :parent, :nodes

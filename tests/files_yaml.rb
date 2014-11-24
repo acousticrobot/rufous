@@ -1,8 +1,8 @@
-require 'test/unit'
+require "minitest/autorun"
 require 'yaml'
 require 'pry'
 
-class Files < Test::Unit::TestCase
+class Files < MiniTest::Test
 
   def setup
     @dir = File.join(Dir.home,".rufous")

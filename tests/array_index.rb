@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class ArrayIndexTests < Test::Unit::TestCase
+class ArrayIndexTests < MiniTest::Test
 
 
   def test_index_method

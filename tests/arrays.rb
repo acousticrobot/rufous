@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class ArrayTests < Test::Unit::TestCase
+class ArrayTests < MiniTest::Test
 
   def test_array_equivalence
     assert( same_elements?( ['a','b','c'], ['a','b','c'] ), "in the same order")

@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class SplatsTests < Test::Unit::TestCase
+class SplatsTests < MiniTest::Test
 
   def echo_splat *splat
     splat

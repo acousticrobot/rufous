@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class MetaTest < Test::Unit::TestCase
+class MetaTest < MiniTest::Test
 
   def setup
     # set conditions before each test
@@ -33,7 +33,7 @@ class MetaTest < Test::Unit::TestCase
 
 end
 
-class MetaTest2 < Test::Unit::TestCase
+class MetaTest2 < MiniTest::Test
 
   def test_after_first_test_results_are_finished
       assert_equal(2, $global_counter)
@@ -45,7 +45,7 @@ class MetaTest2 < Test::Unit::TestCase
     my_array = ["my","ordered", "array"]
     assert_instance_of Array, my_array
     assert_equal ["my", "ordered", "array"], my_array
-    assert_not_equal ["ordered", "my", "array"], my_array
+    refute_equal ["ordered", "my", "array"], my_array
   end
 
   def test_hash_tests

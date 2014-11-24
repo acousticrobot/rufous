@@ -1,4 +1,4 @@
-require 'test/unit'
+require "minitest/autorun"
 
 class Responder
 
@@ -24,7 +24,7 @@ class Responder
   end
 end
 
-class ArrayTests < Test::Unit::TestCase
+class ArrayTests < MiniTest::Test
 
   def can_test_if_class_responds_to_method
     responder = Responder.new

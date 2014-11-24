@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class InheritableUniqueIds < Test::Unit::TestCase
+class InheritableUniqueIds < MiniTest::Test
 
   class Family
     attr_reader :id

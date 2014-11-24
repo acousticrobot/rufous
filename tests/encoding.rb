@@ -1,8 +1,8 @@
 # encoding: UTF-8
 
-require 'test/unit'
+require "minitest/autorun"
 
-class Encodings < Test::Unit::TestCase
+class Encodings < MiniTest::Test
 # For more in-depth look into Ruby string encodings:
 #
 # http://yehudakatz.com/2010/05/05/ruby-1-9-encodings-a-primer-and-the-solution-for-rails/

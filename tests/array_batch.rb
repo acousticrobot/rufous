@@ -1,7 +1,6 @@
-require 'test/unit'
-require 'pry'
+require "minitest/autorun"
 
-class ArrayBatch < Test::Unit::TestCase
+class ArrayBatch < MiniTest::Test
 
   def batch_process array, limit, &block
     first = 0

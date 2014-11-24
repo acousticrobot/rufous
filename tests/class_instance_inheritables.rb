@@ -1,6 +1,6 @@
-require 'test/unit'
+require "minitest/autorun"
 
-class ClassInstanceInheritables < Test::Unit::TestCase
+class ClassInstanceInheritables < MiniTest::Test
 
   # Class instance variables aren't inherited by child classes, but can be managed like this.
   # See also:
