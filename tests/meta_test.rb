@@ -35,11 +35,13 @@ end
 
 class MetaTest2 < MiniTest::Test
 
-  def test_after_first_test_results_are_finished
-      assert_equal(2, $global_counter)
-      # This counter will live on, see global variables
-      $global_counter = 999
-  end
+  #Minitest does not run tests in predetermined order
+
+  # def test_after_first_test_results_are_finished
+  #     assert_equal(2, $global_counter)
+  #     # This counter will live on, see global variables
+  #     $global_counter = 999
+  # end
 
   def test_array_tests
     my_array = ["my","ordered", "array"]
