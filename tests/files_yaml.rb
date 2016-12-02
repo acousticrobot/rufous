@@ -1,6 +1,5 @@
 require "minitest/autorun"
 require 'yaml'
-require 'pry'
 
 class Files < MiniTest::Test
 
