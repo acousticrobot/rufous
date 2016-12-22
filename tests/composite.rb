@@ -113,7 +113,7 @@ class CompositeTests < MiniTest::Test
     c1 << c2
     c1.delete c2
     assert_equal c1.nodes, []
-    assert_equal c2.parent, nil
+    assert_nil c2.parent
   end
 
   def test_report_branches

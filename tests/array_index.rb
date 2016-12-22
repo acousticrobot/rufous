@@ -8,7 +8,7 @@ class ArrayIndexTests < MiniTest::Test
 
     assert_equal intervals.index { |i| 500 <= i }, 0
     assert_equal intervals.index { |i| 601 <= i }, 1
-    assert_equal intervals.index { |i| 4400 <= i }, nil
+    assert_nil intervals.index { |i| 4400 <= i }
   end
 
   def test_lookup_index_in_hash
